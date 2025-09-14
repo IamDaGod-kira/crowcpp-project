@@ -11,11 +11,17 @@ int main()
         return "Hello, World!";
     });
 
+    // Route 2: templates/index.html
+    CROW_ROUTE(app, "/main")([](){
+        auto page = crow::mustache::load("index.html");
+        return page.render();
+    });
+
     // Route 3: Adding function (GET /add?a=1&b=2)
     CROW_ROUTE(app, "/add/<int>/<int>")
     ([](int a, int b){
         int sum = a + b;
-        return crow::response(std::to_string(sum));
+        return crow::response(to_string(sum));
     });
 
     app.port(8080).multithreaded().run();
