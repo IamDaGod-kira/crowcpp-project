@@ -35,7 +35,7 @@ A simple web server project using [Crow](https://github.com/CrowCpp/Crow) and [A
     > **Important Note:**  
     > This project uses `MinGW Makefiles` as the CMake toolchain. If you are using Visual Studio Code, you may not see `MinGW Makefiles` as an available toolchain in the CMake Tools configuration.  
     > **Do not select `conan-release` as the build preset in VS Code.**  
-    > If you are using VS Code, skip the step where you specify the generator in the `CMake: Configure` and use the default CMake configuration provided by the in the Command given here (`-G "MinGW Maefiles"`).
+    > If you are using VS Code, skip the step where you specify the generator in the `CMake: Configure` and use the default CMake configuration provided in the Command given here (`-G "MinGW Maefiles"`).
 ## Requirements
 
 - C++17 or newer
