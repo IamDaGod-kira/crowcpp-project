@@ -2,8 +2,10 @@
     project(MyCrowApp CXX)
     
     # Set Crow_DIR or CMAKE_PREFIX_PATH to help CMake find Crow
-     list(APPEND CMAKE_PREFIX_PATH "build/Release/generators/")
-     
+    list(APPEND CMAKE_PREFIX_PATH "build/Release/generators/")
+    
+    set(CMAKE_GENERATOR "MinGW Makefiles")
+
     # This finds the Crow package provided by Conan
     find_package(Crow REQUIRED)
     
