@@ -9,3 +9,12 @@
     
     add_executable(my_server src/main.cpp) # Assuming your main source file is src/main.cpp
     target_link_libraries(my_server Crow::Crow)
+
+    add_custom_command(
+        TARGET my_server 
+        POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+                "${CMAKE_CURRENT_SOURCE_DIR}/src/templates"
+                "$<TARGET_FILE_DIR:my_server>/templates"
+        COMMENT "Copying Templates directory"
+    )

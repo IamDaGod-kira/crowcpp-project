@@ -6,6 +6,8 @@ int main()
 {
     crow::SimpleApp app;
 
+    crow::mustache::set_global_base("./templates");
+
     // Route 1: Hello World
     CROW_ROUTE(app, "/")([](){
         return "Hello, World!";
