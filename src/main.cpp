@@ -13,7 +13,7 @@ int main()
         return "Hello, World!";
     });
 
-    // Route 2: templates/index.html
+    // Router 2: templates/index.html
     CROW_ROUTE(app, "/main")([](){
         auto page = crow::mustache::load("index.html");
         return page.render();
