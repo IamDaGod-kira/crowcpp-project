@@ -21,7 +21,7 @@ A simple web server project using [Crow](https://github.com/CrowCpp/Crow) and [A
 3. **Build the project**
     ```sh
     #cofigure build
-    cmake -B build -S . -G "MinGW Makefiles" -DCMAKE_BUILD_TYPE="Release"
+    cmake -B build -S . -DCMAKE_BUILD_TYPE="Release"
     #build the project
     cmake --build build
     ```
